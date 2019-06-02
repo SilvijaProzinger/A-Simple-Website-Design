@@ -1,0 +1,93 @@
+body, html {
+  height: 100%;
+  background: url("../centralimage.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body a, html a {
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+}
+body a:hover, html a:hover {
+  color: #581845;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+  overflow: hidden;
+}
+body .sidebar {
+  width: 20%;
+  background-color: black;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+body .sidebar h3 {
+  font-size: 1.5em;
+  margin: 30px;
+  text-align: center;
+  color: white;
+  letter-spacing: 3px;
+}
+body .sidebar #slide {
+  text-align: center;
+  display: block;
+  color: white;
+}
+body .sidebar #slide-txt {
+  display: none;
+  color: white;
+  position: relative;
+  font-size: 0.8em;
+  margin: 30px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+body .menu {
+  position: relative;
+  float: right;
+  display: block;
+}
+body .menu #menu-items {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 100px;
+  padding: 25px;
+  right: 0;
+  z-index: 1;
+}
+body .menu #menu-items #menu-items a {
+  color: black;
+  text-align: center;
+}
+body .name-and-social {
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  width: 25%;
+  height: 20%;
+  position: fixed;
+}
+body .name-and-social h3 {
+  margin: 30px;
+  text-align: center;
+}
+body .name-and-social .social-icons {
+  position: relative;
+  text-align: center;
+}
+body .name-and-social .social-icons svg {
+  display: inline-block;
+  height: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*# sourceMappingURL=style.css.map */

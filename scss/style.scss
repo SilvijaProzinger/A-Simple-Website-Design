@@ -1,0 +1,114 @@
+$align: center;
+
+$margin: 30px;
+
+$position: fixed;
+
+@mixin bg-image($img-url, $background-top:"center", $background-left:"center", $background-attachment:"fixed") {
+  background: url($img-url) no-repeat unquote($background-top) unquote($background-left) unquote($background-attachment); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;  
+}
+
+body, html {
+	height: 100%;
+	@include bg-image('../centralimage.jpg');
+
+	a {
+		text-decoration: none;
+		outline: none;
+		color: inherit;
+	}
+
+	a:hover {
+		color: #581845;
+	}
+}
+
+body {
+	font-family: 'Playfair Display', serif;
+	overflow: hidden;
+
+	.sidebar {
+		width: 100% - 80%;
+		background-color: black;
+		height: 100%;
+		position: $position;
+		top: 0;
+		left: 0;
+		bottom: 0;
+
+		h3 {
+			font-size: 1.5em;
+			margin: $margin;
+			text-align: $align;
+			color: white;
+			letter-spacing: 3px;
+		}
+
+		#slide {
+			text-align: $align;
+			display: block;
+			color: white;
+		}
+
+		#slide-txt {
+			display: none;
+			color: white;
+			position: relative;
+			font-size: 0.8em;
+			margin: $margin;
+			text-align: $align;
+			letter-spacing: 2px;
+		}
+	}
+
+	.menu {
+		position: relative;
+		float: right;
+		display: block;
+
+		#menu-items {
+			display: none;
+			position: absolute;
+			background-color: white;
+			min-width: 100px;
+			padding: 25px;
+			right: 0;
+			z-index: 1;
+
+			#menu-items a {
+				color: black;
+				text-align: $align;
+			}
+		}
+	}
+
+	.name-and-social {
+		bottom: 0;
+		right: 0;
+		background-color: white;
+		width: 100% - 75%;
+		height: 100% - 80%;
+		position: $position;
+
+		h3 {
+			margin: $margin;
+			text-align: $align;
+		}
+
+		.social-icons {
+			position: relative;
+			text-align: $align;
+		}
+
+		.social-icons svg {
+			display: inline-block;
+			height: 20px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
